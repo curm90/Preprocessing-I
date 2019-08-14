@@ -140,7 +140,7 @@ html {
 .container {
   max-width: 960px;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 1rem 1rem 0 1rem;
 }
 nav {
   display: flex;
@@ -228,4 +228,31 @@ main .main-skills ul {
 main .main-skills ul li {
   border: 1px solid #ddd;
   padding: 1rem;
+}
+section h3 {
+  font-size: 1.8rem;
+  padding: 1rem 0;
+}
+section .work-history-table {
+  border: 1px solid black;
+}
+section .work-history-table .work-titles ul {
+  display: flex;
+  justify-content: space-around;
+  font-weight: bold;
+}
+section .work-history-table .work {
+  padding: 1rem 0;
+}
+section .work-history-table .work ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+footer {
+  background: gray;
+  padding: 3rem 0;
+  text-align: center;
+  color: #f3f2f2;
+  margin-top: 2rem;
 }

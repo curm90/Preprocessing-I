@@ -20,6 +20,10 @@
 	padding: 1rem 1rem 0 1rem;
 	font-family: sans-serif;
 
+	@media (max-width: 500px) {
+		padding: 0;
+	}
+
 	nav {
 		display: flex;
 		justify-content: flex-end;
@@ -33,6 +37,22 @@
 				a {
 					text-decoration: none;
 					color: black;
+				}
+			}
+		}
+
+		@media(max-width: 500px) {
+			width: 100%;
+			margin-bottom: 3rem;
+
+			ul {
+				flex-direction: column;
+				width: 100%;
+
+				li {
+					border-bottom: 1px solid @main-page-color;
+					text-align: center;
+					font-size: @medium-paragraph-text;
 				}
 			}
 		}
@@ -88,9 +108,18 @@
 		display: flex;
 		justify-content: space-between;
 		margin: 1.8rem 0;
+
+		@media (max-width: 500px) {
+			flex-direction: column;
+		}
 	
 		.main-content {
 			width: 50%;
+
+			@media (max-width: 500px) {
+				width: 100%;
+				padding: 0 1rem;
+			}
 		}
 	
 		.main-text {
@@ -108,6 +137,10 @@
 	
 		.main-skills {
 			margin-left: 1rem;
+
+			@media (max-width: 500px) {
+				margin: 2rem 0 0 0;
+			}
 	
 			h2 {
 				font-size: @medium-heading;
@@ -153,6 +186,12 @@
 					}
 				}
 			}
+		}
+	}
+
+	@media (max-width: 500px) {
+		.work-history-title {
+			padding-left: 1rem;
 		}
 	}
 	

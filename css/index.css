@@ -140,6 +140,7 @@ html {
 .container {
   max-width: 960px;
   margin: 0 auto;
+  padding: 1rem;
 }
 nav {
   display: flex;
@@ -194,4 +195,37 @@ header .header-intro button {
 }
 .header-img img {
   width: 100%;
+}
+main {
+  display: flex;
+  justify-content: space-between;
+  margin: 1.8rem 0;
+}
+main .main-content {
+  width: 50%;
+}
+main .main-text {
+  justify-content: space-between;
+}
+main .main-text h2 {
+  font-size: 2rem;
+  padding-bottom: 1rem;
+}
+main .main-text p {
+  line-height: 1.5;
+}
+main .main-skills {
+  margin-left: 1rem;
+}
+main .main-skills h2 {
+  font-size: 1.8rem;
+  padding-bottom: 1rem;
+}
+main .main-skills ul {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+main .main-skills ul li {
+  border: 1px solid #ddd;
+  padding: 1rem;
 }

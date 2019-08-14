@@ -134,122 +134,119 @@ html,
 body {
   height: 100%;
 }
-html {
-  font-family: sans-serif;
-}
 .container {
   max-width: 960px;
   margin: 0 auto;
   padding: 1rem 1rem 0 1rem;
+  font-family: sans-serif;
 }
-nav {
+.container nav {
   display: flex;
   justify-content: flex-end;
 }
-nav ul {
+.container nav ul {
   display: flex;
 }
-nav ul li {
+.container nav ul li {
   padding: 2rem 1rem;
 }
-nav ul li a {
+.container nav ul li a {
   text-decoration: none;
   color: black;
 }
-header {
+.container header {
   background: #dbe0e7;
   border-radius: 6px;
   padding: 2rem;
   display: flex;
   flex-direction: column;
 }
-header .header-title {
+.container header .header-title {
   display: flex;
   flex-direction: column;
   border-bottom: 1px solid black;
 }
-header .header-title h1 {
+.container header .header-title h1 {
   font-size: 3rem;
   padding: 1rem 0;
 }
-header .header-title p {
+.container header .header-title p {
   padding-bottom: 1rem;
   font-size: 1.2rem;
 }
-header .header-intro {
+.container header .header-intro {
   margin: 1rem 0;
 }
-header .header-intro p {
+.container header .header-intro p {
   padding-bottom: 1rem;
 }
-header .header-intro button {
+.container header .header-intro button {
   font-size: 1.3rem;
   background: gray;
   color: white;
   padding: 1rem;
   border-radius: 6px;
 }
-.header-img {
+.container .header-img {
   max-width: 400px;
   margin-bottom: 16px;
 }
-.header-img img {
+.container .header-img img {
   width: 100%;
 }
-main {
+.container main {
   display: flex;
   justify-content: space-between;
   margin: 1.8rem 0;
 }
-main .main-content {
+.container main .main-content {
   width: 50%;
 }
-main .main-text {
+.container main .main-text {
   justify-content: space-between;
 }
-main .main-text h2 {
+.container main .main-text h2 {
   font-size: 2rem;
   padding-bottom: 1rem;
 }
-main .main-text p {
+.container main .main-text p {
   line-height: 1.5;
 }
-main .main-skills {
+.container main .main-skills {
   margin-left: 1rem;
 }
-main .main-skills h2 {
+.container main .main-skills h2 {
   font-size: 1.8rem;
   padding-bottom: 1rem;
 }
-main .main-skills ul {
+.container main .main-skills ul {
   border: 1px solid #ddd;
   border-radius: 6px;
 }
-main .main-skills ul li {
+.container main .main-skills ul li {
   border: 1px solid #ddd;
   padding: 1rem;
 }
-section h3 {
+.container section h3 {
   font-size: 1.8rem;
   padding: 1rem 0;
 }
-section .work-history-table {
-  border: 1px solid black;
-}
-section .work-history-table .work-titles ul {
+.container section .work-history-container .work-history-row {
   display: flex;
-  justify-content: space-around;
+  border-bottom: 1px solid gray;
+}
+.container section .work-history-container .work-history-row:nth-of-type(even) {
+  background: #eeeaea;
+}
+.container section .work-history-container .work-history-row .work-column {
+  flex: 1;
+  width: 25%;
+  padding: 1rem;
+}
+.container section .work-history-container .work-history-row .work-column.title {
   font-weight: bold;
 }
-section .work-history-table .work {
-  padding: 1rem 0;
-}
-section .work-history-table .work ul {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-footer {
+.container footer {
   background: gray;
   padding: 3rem 0;
   text-align: center;

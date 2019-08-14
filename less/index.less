@@ -17,7 +17,7 @@ nav {
 		display: flex;
 
 		li {
-			padding: 16px;
+			padding: 2rem 1rem;
 
 			a {
 				text-decoration: none;
@@ -26,5 +26,55 @@ nav {
 		}
 	}
 }
+
+header {
+	background: #dbe0e7;
+	border-radius: 6px;
+	padding: 2rem;
+	display: flex;
+	flex-direction: column;
+
+	.header-title {
+		display: flex;
+		flex-direction: column;
+		border-bottom: 1px solid black;
+
+		h1 {
+			font-size: 3rem;
+			padding: 1rem 0;
+		}
+		p {
+			padding-bottom: 1rem;
+			font-size: 1.2rem;
+		}
+	}
+
+	.header-intro {
+		margin: 1rem 0;
+
+		p {
+			padding-bottom: 1rem;
+		}
+
+		button {
+			font-size: 1.3rem;
+			background: gray;
+			color: white;
+			padding: 1rem;
+			border-radius: 6px;
+		}
+	}
+}
+
+.header-img {
+	max-width: 400px;
+	margin-bottom: 16px;
+
+	img {
+		width: 100%;
+	}
+}
+
+
 
 

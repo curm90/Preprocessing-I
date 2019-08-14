@@ -149,9 +149,49 @@ nav ul {
   display: flex;
 }
 nav ul li {
-  padding: 16px;
+  padding: 2rem 1rem;
 }
 nav ul li a {
   text-decoration: none;
   color: black;
+}
+header {
+  background: #dbe0e7;
+  border-radius: 6px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+header .header-title {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid black;
+}
+header .header-title h1 {
+  font-size: 3rem;
+  padding: 1rem 0;
+}
+header .header-title p {
+  padding-bottom: 1rem;
+  font-size: 1.2rem;
+}
+header .header-intro {
+  margin: 1rem 0;
+}
+header .header-intro p {
+  padding-bottom: 1rem;
+}
+header .header-intro button {
+  font-size: 1.3rem;
+  background: gray;
+  color: white;
+  padding: 1rem;
+  border-radius: 6px;
+}
+.header-img {
+  max-width: 400px;
+  margin-bottom: 16px;
+}
+.header-img img {
+  width: 100%;
 }

@@ -1,5 +1,12 @@
 @import './reset.less';
 
+// Colors
+@main-page-color: #e8edf5;
+
+// Font Sizes
+@large-heading: 3rem; 
+@medium-heading: 2rem;
+
 .container {
 	max-width: 960px;
 	margin: 0 auto;
@@ -25,7 +32,7 @@
 	}
 	
 	header {
-		background: #dbe0e7;
+		background: @main-page-color;
 		border-radius: 6px;
 		padding: 2rem;
 		display: flex;
@@ -37,7 +44,7 @@
 			border-bottom: 1px solid black;
 	
 			h1 {
-				font-size: 3rem;
+				font-size: @large-heading;
 				padding: 1rem 0;
 			}
 			p {
@@ -85,7 +92,7 @@
 			justify-content: space-between;
 			
 			h2 {
-				font-size: 2rem;
+				font-size: @medium-heading;
 				padding-bottom: 1rem;
 			}
 			
@@ -98,7 +105,7 @@
 			margin-left: 1rem;
 	
 			h2 {
-				font-size: 1.8rem;
+				font-size: @medium-heading;
 				padding-bottom: 1rem;
 			}
 	
@@ -117,7 +124,7 @@
 	section {
 		
 		h3 {
-			font-size: 1.8rem;
+			font-size: @medium-heading;
 			padding: 1rem 0;
 		}
 	
@@ -128,7 +135,7 @@
 				border-bottom: 1px solid gray;
 
 				&:nth-of-type(even) {
-					background: #eeeaea;
+					background: @main-page-color;
 				}
 
 				.work-column {

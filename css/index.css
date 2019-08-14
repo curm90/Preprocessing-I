@@ -134,3 +134,24 @@ html,
 body {
   height: 100%;
 }
+html {
+  font-family: sans-serif;
+}
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+nav {
+  display: flex;
+  justify-content: flex-end;
+}
+nav ul {
+  display: flex;
+}
+nav ul li {
+  padding: 16px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: black;
+}

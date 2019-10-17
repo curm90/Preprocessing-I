@@ -1,59 +1,235 @@
-// Is this working?
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+@import './reset.less';
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+// Colors
+@main-page-color: #e8edf5;
+
+// Font Sizes
+@large-heading: 3rem; 
+@medium-heading: 2rem;
+@medium-paragraph-text: 1.2rem;
+
+// Mixins
+.displayFlexColumn {
+	display: flex;
+	flex-direction: column;
 }
 
-/* Set every element's box-sizing to border-box */
-* {
-    box-sizing: border-box;
+.container {
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 1rem 1rem 0 1rem;
+	font-family: sans-serif;
+
+	@media (max-width: 500px) {
+		padding: 0;
+	}
+
+	nav {
+		display: flex;
+		justify-content: flex-end;
+	
+		ul {
+			display: flex;
+	
+			li {
+				padding: 2rem 1rem;
+	
+				a {
+					text-decoration: none;
+					color: black;
+				}
+			}
+		}
+
+		@media(max-width: 500px) {
+			width: 100%;
+			margin-bottom: 3rem;
+
+			ul {
+				flex-direction: column;
+				width: 100%;
+
+				li {
+					border-bottom: 1px solid @main-page-color;
+					text-align: center;
+					font-size: @medium-paragraph-text;
+				}
+			}
+		}
+	}
+	
+	header {
+		background: @main-page-color;
+		border-radius: 6px;
+		padding: 2rem;
+		.displayFlexColumn();
+	
+		.header-title {
+			.displayFlexColumn();
+			border-bottom: 1px solid black;
+	
+			h1 {
+				font-size: @large-heading;
+				padding: 1rem 0;
+			}
+			p {
+				padding-bottom: 1rem;
+				font-size: @medium-paragraph-text;
+			}
+		}
+	
+		.header-intro {
+			margin: 1rem 0;
+	
+			p {
+				padding-bottom: 1rem;
+			}
+	
+			button {
+				font-size: @medium-paragraph-text;
+				background: gray;
+				color: white;
+				padding: 1rem;
+				border-radius: 6px;
+			}
+		}
+	}
+	
+	.header-img {
+		max-width: 400px;
+		margin-bottom: 16px;
+	
+		img {
+			width: 100%;
+		}
+	}
+	
+	main {
+		display: flex;
+		justify-content: space-between;
+		margin: 1.8rem 0;
+
+		@media (max-width: 500px) {
+			flex-direction: column;
+		}
+	
+		.main-content {
+			width: 50%;
+
+			@media (max-width: 500px) {
+				width: 100%;
+				padding: 0 1rem;
+			}
+		}
+	
+		.main-text {
+			justify-content: space-between;
+			
+			h2 {
+				font-size: @medium-heading;
+				padding-bottom: 1rem;
+			}
+			
+			p {
+				line-height: 1.5;
+			}
+		}
+	
+		.main-skills {
+			margin-left: 1rem;
+
+			@media (max-width: 500px) {
+				margin: 2rem 0 0 0;
+			}
+	
+			h2 {
+				font-size: @medium-heading;
+				padding-bottom: 1rem;
+			}
+	
+			ul {
+				border: 1px solid #ddd;
+				border-radius: 6px;
+	
+				li {
+					border: 1px solid #ddd;
+					padding: 1rem;
+				}
+			}
+		}
+	}
+	
+	section {
+		
+		h3 {
+			font-size: @medium-heading;
+			padding: 1rem 0;
+		}
+	
+		.work-history-container {
+	
+			.work-history-row {
+				display: flex;
+				border-bottom: 1px solid gray;
+
+				&:nth-of-type(even) {
+					background: @main-page-color;
+				}
+
+				.work-column {
+					flex: 1;
+					width: 25%;
+					padding: 1rem;
+
+					&.title {
+						font-weight: bold;
+					}
+				}
+			}
+		}
+	}
+
+	@media (max-width: 500px) {
+		.work-history-title {
+			padding-left: 1rem;
+		}
+	}
+	
+	footer {
+		background: gray;
+		padding: 3rem 0;
+		text-align: center;
+		color: #f3f2f2;
+		margin-top: 2rem;
+	}
+
+	.contact-text {
+		text-align: center;
+		margin: 1rem 0;
+	}
+
+	.contact-info {
+		.displayFlexColumn();
+		margin: 1rem auto;
+		justify-content: center;
+		align-items: center;
+		width: 30%;
+		
+
+		h2 {
+			font-weight: bold;
+			padding: 1rem 0;
+			font-size: 1.4rem;
+		}
+
+		p {
+			font-size: @medium-paragraph-text;
+		}
+	}
 }
 
-html, body {
-    height: 100%;
-}
+
+
+
+
 
